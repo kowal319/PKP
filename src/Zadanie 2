@@ -1,0 +1,50 @@
+2.
+Mając tablicę int[] numbers, wypełnioną liczbami całkowitymi i posortowaną malejąco ( numbers[i] > numbers[i+1] ),
+sprawdź czy występuje w niej liczba int x. Metoda powinna zwracać wartość TRUE,
+jeśli dana liczba występuje oraz FALSE w przeciwnym wypadku. W rozwiązaniu zależy nam na jak najmniejszej złożoności obliczeniowej (priorytet) oraz pamięciowej.
+Podaj szacowaną złożoność obliczeniową oraz pamięciową. Poniżej sygnatura metody do napisania.
+
+private boolean search(int[] numbers, int x){}
+
+import java.util.Arrays;
+
+import static java.util.Arrays.sort;
+
+public class Main {
+    public static boolean search(int[] numbers, int x) {
+
+        sort(numbers);
+        System.out.println("Tablica posortowana: ");
+        for (int i = 0; i < 10; i++)
+            System.out.print(numbers[i] + " ");
+        System.out.println();
+        int low = 0;
+        int high = numbers.length - 1;
+
+        while (high >= low) {
+            int mid = (low + high) / 2;
+            if (x < numbers[mid])
+                high = mid - 1;
+            else if (x == numbers[mid])
+                return true;
+            else
+                low = mid + 1;
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        long startTime = System.nanoTime();
+
+        int[] numbers = new int[10];
+        for (int i = 0; i < 10; i++)
+            numbers[i] = i + 1;
+
+        System.out.println(search(numbers, 1));
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime);
+        duration = duration / 1000000;
+        System.out.println("Czas wykonywania: " + duration + " milisekund");
+//    Złożoność obliczeniowa = ?(log(n)).
+
+    }
+}
