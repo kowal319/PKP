@@ -1,0 +1,24 @@
+1.
+1.A. W jakim celu używa się klas abstrakcyjnych, a w jakim interfejsów?
+1.B. Czym różni się tablica od listy liniowej?
+
+
+1.A Interfejsow uzywa sie w celu integracji roznych fragmentow kodu.
+Interfej mowi nam co klasa implementujaca moze robic ale nie w jaki sposob ma to byc zrobione.
+Pozwalawalaj zarzadzac metodami w latwiejszy sposob.
+Dzieki nim mozemy obejsc dzidziczenie wilokrotne ktore nie jest wspierane w jave, poniewaz mozemy implementowac wiele interfejsow.
+Rowzniez stosuje sie je w celu ukrycia danych kodu poniewaz posiadaja metody czyli co maja robic a nie w jaki sposob, czyli to o czym wczesniej pisalem.
+Interfejs mozna przedstawic na przykladzie piekarnika ktory ma rozne opcje pieczenia jak np drobiu, wolowiny lub ryb.
+Kazda opcja wymaga inynch ustawien jedna potrwawa w innej temperaturze sie piecze a  druga w innej, roznia sie tez czasem pieczenia,
+Interfejs poprostu posiada te metody tych zachowac, czyli poprostu zestaw takich opcji do uzycia, ale nie pkazuje jak te zachowania dzialaja.
+
+Klas abstrakcyjnych uzywa sie w przypadku gdy nie mamy zamiary utworzyc z niej instancji obietku, poniewaz z klas abstrakcyjnych nie mozna tego robic.
+Klas abstrakcyjnych uzywa sie jako bazy do tworzenia innych klas. Trzeba tutaj zapamietac zeby nie uzywac klasy abstrakcyjnej gdy mamy zamiar utworzyc obiekt jej typu czyli instancje.
+Czyli w skrocie sa bardzo podobne do siebie jedyna roznica jest w ich stosowaniu poniewaz klase abstrakcyjna mozna dziedziczyc tylko jedna a interfejsow mozna implementowac nieskonczona ilosc.
+
+1B
+Pierwsza mysl jaka nasuwa mi sie jest to roznica w samym tworzeniu,
+przy tworzeniu ablicy od razu zaznaczamy ile bedzie miec elementow a w liscie nie musimy tego robic.
+Lista ma to do siebie ze jej kazdy element zapamietuje tez adres kolejnego co ulatwia dodawanie lub usuwanie elemntow.
+Natiomiast Tablica przechowuje caly blok i tutaj szybsza jest jezeli chodzi o wyswietlanie elementow lecz spowalnia jezeli dodajemy lub usuwamy poniewaz robiac takie czynnosci w srodku tablicy musi ona przesunac reszte elementow.
+
